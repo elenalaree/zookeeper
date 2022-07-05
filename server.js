@@ -43,8 +43,8 @@ app.get('/api/animals', (req, res) => {
 app.get('/api/animals/:id', (req, res) => {
     const result = findByPk(req.params.id, animals);
         res.json(result);
-})
+});
 
 app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}!`);
-})
+});
