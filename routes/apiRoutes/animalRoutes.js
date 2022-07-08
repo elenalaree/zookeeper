@@ -3,7 +3,7 @@ const { filterByQuery, findById, createNewAnimal, validateAnimal } = require('..
 const { animals } = require('../../data/animals');
 
 
-router.get('/api/animals', (req, res) => {
+router.get('/animals', (req, res) => {
     let results = animals;
     if (req.query){
         results = filterByQuery(req.query, results);
@@ -18,7 +18,7 @@ router.get('/animals/:id', (req, res) => {
     } else {
         res.send(404);
     }
-        res.json(result);
+
 });
 
 router.post('/animals', (req, res) => {
